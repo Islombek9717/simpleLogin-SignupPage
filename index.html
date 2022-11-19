@@ -1,0 +1,112 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="formWrapper">
+      <h1>
+        <span class="active" data-class="login">Login</span
+        ><span class="active" data-class="signup">Sign up</span>
+      </h1>
+      <form id="login" class="login">
+        <h2>Login</h2>
+        <p>Enter user name and password:</p>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="entEmail"
+          name="email"
+          required
+          placeholder="Email"
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="entPwd"
+          name="password"
+          required
+          placeholder="Password"
+        />
+        <input class="btn" type="submit" value="Login" onclick="checkData()" />
+      </form>
+      <form id="signup" class="signup">
+        <h2>Sign up</h2>
+        <p>Fill in the form:</p>
+        <label for="name">First name</label>
+        <input
+          type="text"
+          name="username"
+          id="name"
+          placeholder="First name"
+          required
+          pattern="[A-Za-z]"
+          oninput="this.value = this.value.toUpperCase()"
+        />
+        <label for="lsname">Last name</label>
+        <input
+          type="text"
+          name="lsname"
+          id="lsname"
+          placeholder="Last name"
+          required
+          oninput="this.value = this.value.toUpperCase()"
+        />
+        <div class="gender">
+          <input
+            type="radio"
+            name="gender"
+            class="radioBtn"
+            required
+            id="male"
+          />
+          <label for="male">Male</label>
+          <input
+            type="radio"
+            name="gender"
+            class="radioBtn"
+            required
+            id="female"
+          />
+          <label for="male">Female</label>
+        </div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="Email"
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          placeholder="Password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+          title="At least 6 characters, one capital letter, one lowercase letter, at least
+        one digit, and one special character;
+        "
+        />
+        <label for="password">Confirm password</label>
+        <input
+          type="password"
+          name="cfpassword"
+          required
+          placeholder="Confirm password"
+        />
+        <input class="btn" type="submit" value="Signup" onclick="addData()" />
+      </form>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+  <script src="script.js"></script>
+  <script src="register.js"></script>
+  <script src="login.js"></script>
+</html>

@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #384047;
+}
+
+.formWrapper {
+  width: 390px;
+  margin: 50px auto;
+}
+
+form {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+  box-sizing: border-box;
+  padding: 10px;
+  background: rgba(40, 36, 36, 0.811);
+}
+
+h1 {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+h1 span {
+  font-size: 26px;
+  padding: 10px 5px;
+  font-weight: 300;
+  border: 1px solid grey;
+  color: grey;
+  width: 50%;
+  cursor: pointer;
+  background: #ffff;
+}
+
+h1 [data-class="login"].active{
+    color: black;
+    border-top: 5px solid #2f558e;
+}
+h1 [data-class="signup"].active{
+    color: black;
+    border-top: 5px solid #2f558e;
+}
+
+h2 {
+  color: white;
+  font-weight: bold;
+}
+
+
+.gender {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.gender label {
+    margin: 0;
+}
+.radioBtn {
+  margin: 0;
+}
+
+p {
+  color: #ffff;
+}
+
+label {
+  margin-bottom: 10px;
+  color: #ffff;
+}
+
+input {
+  margin-bottom: 20px;
+  padding: 5px 0;
+  border: 1px solid #ffff;
+  background: black;
+  color: #384047;
+}
+
+input:focus {
+  color: #fff;
+}
+
+.btn {
+  width: 100%;
+  color: #fff;
+  background: #2f558e;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+
+.signup {
+    display: none;
+}
+
+.error {
+    color: red;
+}
+
